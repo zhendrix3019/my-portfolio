@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'url';
 
 export default defineConfig({
-  base: '/my-portfolio/',
+  base: '/my-portfolio/',  // Add this line to ensure the correct path is used
   plugins: [vue()],
   resolve: {
     alias: {
