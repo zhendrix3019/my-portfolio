@@ -1,0 +1,289 @@
+/* Root Variables for Theme Colors and Fonts */
+:root {
+  --primary-color: #990D35;    /* Dark red/maroon */
+  --secondary-color: #8CDEDC;  /* Light teal */
+  --background-color: #7284A8; /* Slate blue as background */
+  --text-color-light: #ffffff;
+  --text-color-dark: #000000;
+  --accent-color: #1e88e5;     /* Accent color for links and buttons */
+  font-family: 'Inter', sans-serif;
+}
+
+/* General Body Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Link styles */
+a {
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Button styling */
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Card styles for projects */
+.card {
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #7284A8, #8CDEDC);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #990D35;
+  transform: scale(1.1);
+}
+
+
+
+/* Home Page Styles */
+.home-container {
+  color: var(--text-color-light);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text {
+  flex: 1;
+}
+
+/* Typography for headers */
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5em;
+  color: var(--background-color);
+}
+
+.projects-title {
+  font-size: 3em;
+  font-weight: bold;
+  color: var(--background-color);
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation for header */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skills Section Styles */
+.skills-section h3 {
+  font-size: 1.8rem;
+  color: var(--background-color);
+  margin-bottom: 10px;
+  background: var(--secondary-color);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.text-center {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.text-center::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary-color), var(--background-color));
+  border-radius: 10px;
+}
+
+/* Collapsible Skills Section */
+.skill-category {
+  margin-bottom: 10px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-header:hover {
+  background-color: var(--text-color-light);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.icon {
+  transition: transform 0.3s;
+}
+
+.icon.expanded {
+  transform: rotate(180deg);
+}
+
+.skills-list {
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item {
+  padding: 5px 0;
+  color: var(--text-color-light);
+}
+
+/* Slide transition for expanding/collapsing lists */
+.slide-enter-active, .slide-leave-active {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.slide-enter-from, .slide-leave-to {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* LinkedIn Profile Link Styles */
+.linkedin-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-bg-color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.linkedin-link:hover {
+  background-color: var(--text-color-light);
+  color: var(--primary-color);
+}
