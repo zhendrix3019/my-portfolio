@@ -1,14 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import ProjectsView from '../views/ProjectsView.vue';
+import LandingPage from '@/views/LandingPage.vue';
+import Projects from '@/views/Projects.vue';
+import Skills from '@/views/Skills.vue';
 
 const routes = [
-  { path: '/', name: 'Home', component: HomeView },
-  { path: '/projects', name: 'Projects', component: ProjectsView },
+  { path: '/', component: LandingPage }, // Default landing page
+  { path: '/projects', component: Projects },
+  { path: '/skills', component: Skills },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/my-portfolio/'),
   routes,
 });
 
