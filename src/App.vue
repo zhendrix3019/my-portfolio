@@ -3,7 +3,8 @@
     <!-- Header Navigation -->
     <header class="header-container">
       <nav>
-        <router-link to="/">Technical Skills</router-link>
+        <router-link to="/">Home</router-link>
+        <router-link to="/skills">Technical Skills</router-link>
         <router-link to="/projects">Projects</router-link>
       </nav>
     </header>
@@ -12,7 +13,7 @@
 </template>
 
 <script setup>
-// No changes in the script needed
+// No changes needed here
 </script>
 
 <style scoped>
